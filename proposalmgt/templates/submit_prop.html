@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Proposal</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/submit_prop.css' %}">
+</head>
+<body>
+    <section id="submit-proposal">
+        <h2>Submit a New Proposal</h2>
+        <form action="/prop_filled/" method="post" enctype="multipart/form-data">
+            <!-- CSRF token (for Django) -->
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.title.label_tag }}  <!-- Label for title -->
+                {{ form.title }}  <!-- Input for title -->
+            </div>
+
+            <div class="form-group">
+                {{ form.proposal_type.label_tag }}  <!-- Label for proposal type -->
+                {{ form.proposal_type }}  <!-- Dropdown for proposal type -->
+            </div>
+
+            <div class="form-group">
+                {{ form.file.label_tag }}  <!-- Label for file upload -->
+                {{ form.file }}  <!-- Input for file upload -->
+            </div>
+           
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button onclick="window.location.href='prop_filled'" type="submit" class="submit-btn">Submit Proposal</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

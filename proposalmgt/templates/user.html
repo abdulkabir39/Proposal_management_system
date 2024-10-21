@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Proposal Management System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/user.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#submit-proposal">Submit Proposal</a></li>
+                <li><a href="#my-proposals">My Proposals</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h1>Welcome to Your Dashboard</h1>
+            <div class="actions">
+                <button onclick="window.location.href='submit'">Submit New Proposal</button>
+            </div>
+        </section>
+
+        {% comment %} <section id="submit-proposal">
+            <h2>Submit a New Proposal</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="proposal-upload">Upload your proposal:</label>
+                <input type="file" id="proposal-upload" name="proposal-file" accept=".pdf,.doc,.docx,.txt" />
+                <button type="submit">Submit Proposal</button>
+            </form>
+        </section> {% endcomment %}
+
+        <section id="my-proposals">
+            <h2>My Applications</h2>
+            <div class="filter">
+                <input type="text" placeholder="Filter proposals..." />
+                <button>Search</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Proposal ID</th>
+                        <th>Proposal Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                        {% comment %} <th>Download</th> {% endcomment %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample row -->
+                    <tr>
+                        <td>001</td>
+                        <td>Research Project</td>
+                        <td>2024-09-28</td>
+                        <td>Pending</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                        {% comment %} <td><button>Download</button></td> {% endcomment %}
+                    </tr>
+                    <!-- Rows will be dynamically generated -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <span>Items per page:</span>
+                <select>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>20</option>
+                </select>
+                <span>1 of 1</span>
+                <button>&lt;</button>
+                <button>&gt;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Proposal Management System</p>
+    </footer>
+</body>
+</html>

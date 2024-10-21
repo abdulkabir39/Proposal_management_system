@@ -1,0 +1,210 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section titles */
+h1, h2 {
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Actions Section */
+.actions {
+    margin-bottom: 2rem;
+}
+
+.actions button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.actions button:hover {
+    background-color: #45a049;
+}
+
+/* Filter Section */
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.filter input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 0.5rem;
+}
+
+.filter button {
+    padding: 0.5rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.filter button:hover {
+    background-color: #555;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+td button:hover {
+    background-color: #45a049;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.pagination select, .pagination span, .pagination button {
+    margin-right: 1rem;
+}
+
+.pagination button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+/* Upload Proposal Form */
+#submit-proposal {
+    margin-bottom: 2rem;
+}
+
+#submit-proposal form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#submit-proposal form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+#submit-proposal form input[type="file"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+#submit-proposal form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#submit-proposal form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 2rem;
+}
